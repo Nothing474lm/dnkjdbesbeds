@@ -1,0 +1,3638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Profesional de Desarrollo de Branding | Proceso Completo</title>
+    <meta name="description" content="Sistema completo para desarrollo de marca profesional con metodología probada, herramientas interactivas y seguimiento de progreso">
+    
+    <!-- Preload de fuentes y recursos críticos -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" as="script">
+    
+    <!-- Favicon y meta tags para SEO -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <meta property="og:title" content="Sistema Profesional de Desarrollo de Branding">
+    <meta property="og:description" content="Metodología completa para crear marcas poderosas y memorables">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Sistema de diseño mejorado con variables CSS */
+        :root {
+            /* Colores mejor contrastados */
+            --primary-black: #000000;
+            --secondary-black: #1a1a1a;
+            --tertiary-black: #2d2d2d;
+            --light-gray: #5e5e5e;
+            --medium-gray: #8a8a8a;
+            --soft-gray: #d1d1d1;
+            --background-gray: #f8f8f8;
+            --border-gray: #e0e0e0;
+            --white: #ffffff;
+            
+            /* Colores de marca mejorados */
+            --accent-gold: #d4af37;
+            --accent-gold-light: #e8c766;
+            --accent-gold-dark: #b8941f;
+            --accent-blue: #0066cc;
+            --success-green: #00b359;
+            --warning-orange: #ff6b35;
+            --error-red: #ff3a3a;
+            
+            /* Transiciones optimizadas para rendimiento */
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            /* Sombras con mejor rendimiento */
+            --shadow-subtle: 0 2px 12px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --shadow-intense: 0 15px 50px rgba(0,0,0,0.2);
+            
+            /* Gradientes optimizados */
+            --gradient-primary: linear-gradient(135deg, var(--primary-black) 0%, var(--tertiary-black) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            --gradient-gold-horizontal: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+            
+            /* Bordes redondeados consistentes */
+            --radius-small: 8px;
+            --radius-medium: 12px;
+            --radius-large: 16px;
+            --radius-full: 50px;
+            
+            /* Espaciado sistemático */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-xxl: 48px;
+            --space-xxxl: 64px;
+        }
+
+        /* Reset moderno con mejoras de rendimiento */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Tipografía optimizada para legibilidad */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--secondary-black);
+            background: var(--white);
+            font-size: 1rem; /* 16px base */
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Scroll personalizado con mejor rendimiento */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-gray);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-gold-horizontal);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-gold);
+        }
+
+        /* Indicador de scroll visible */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: var(--gradient-gold-horizontal);
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Contenedores responsivos */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .container-narrow {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        /* Header mejorado con efecto sticky */
+        header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.98);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            transition: var(--transition-smooth);
+            transform: translateY(0);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        header.hidden {
+            transform: translateY(-100%);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-lg) 0;
+            transition: var(--transition-smooth);
+        }
+
+        .header-content.scrolled {
+            padding: var(--space-md) 0;
+        }
+        
+        /* Logo con animación */
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            transition: var(--transition-bounce);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--gradient-accent);
+            border-radius: var(--radius-small);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            transition: var(--transition-bounce);
+        }
+
+        .logo:hover {
+            color: var(--accent-gold);
+        }
+
+        .logo:hover .logo-icon {
+            transform: rotate(15deg) scale(1.2);
+        }
+        
+        /* Navegación mejorada */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--light-gray);
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: var(--transition-fast);
+            position: relative;
+            padding: var(--space-sm) 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-variation-settings: 'wght' 550;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold-horizontal);
+            transition: var(--transition-smooth);
+            transform: translateX(-50%);
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: var(--primary-black);
+            font-variation-settings: 'wght' 600;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Botones con mejor feedback */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            gap: var(--space-sm);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: var(--white);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-hover);
+            color: var(--white);
+        }
+
+        .btn-primary:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-black);
+            border: 2px solid var(--border-gray);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-smooth);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Hero section mejorada */
+        .hero {
+            padding: 10rem 0;
+            text-align: center;
+            background: var(--gradient-primary);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            isolation: isolate;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.1) 0%, transparent 20%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(212, 175, 55, 0.05) 2px,
+                    rgba(212, 175, 55, 0.05) 4px
+                );
+            animation: movePattern 90s linear infinite;
+            z-index: -1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.5));
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes movePattern {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+        
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 300;
+            margin-bottom: var(--space-xl);
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            font-variation-settings: 'wght' 300;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-accent);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+            font-variation-settings: 'wght' 500;
+            display: inline-block;
+        }
+
+        .hero p {
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            opacity: 0.85;
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.9s forwards;
+            opacity: 0;
+        }
+
+        .hero-btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            border-radius: var(--radius-full);
+            transition: var(--transition-bounce);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .hero-btn.primary {
+            background: var(--gradient-accent);
+            color: var(--white);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: var(--transition-smooth);
+        }
+
+        .hero-btn:hover::before {
+            left: 100%;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .hero-btn.primary:hover {
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+        }
+
+        .hero-btn.secondary:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border-color: var(--accent-gold);
+        }
+
+        .hero-btn:active {
+            transform: translateY(0) scale(1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sección de estadísticas mejorada */
+        .stats-section {
+            padding: 6rem 0;
+            background: var(--background-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+
+        .stats-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xxl);
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: var(--space-xxl) var(--space-lg);
+            background: var(--white);
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-subtle);
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .stat-item.animate {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold-horizontal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .stat-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 200;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+            position: relative;
+            font-variation-settings: 'wght' 200;
+            transition: var(--transition-fast);
+        }
+
+        .stat-item:hover .stat-number {
+            color: var(--accent-gold-dark);
+        }
+
+        .stat-number::after {
+            content: '+';
+            position: absolute;
+            top: 0;
+            right: -1.5rem;
+            font-size: 2rem;
+            color: var(--accent-gold);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .stat-item:hover .stat-number::after {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+
+        .stat-description {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* Sección de metodología mejorada */
+        .methodology-section {
+            padding: 8rem 0;
+            background: var(--white);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 300;
+            color: var(--primary-black);
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+            position: relative;
+            display: inline-block;
+            font-variation-settings: 'wght' 300;
+        }
+
+        .section-header h2 span {
+            font-variation-settings: 'wght' 500;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4rem;
+            height: 4px;
+            background: var(--gradient-gold-horizontal);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--light-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .methodology-timeline {
+            position: relative;
+            margin: 5rem 0;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--border-gray);
+            z-index: 1;
+        }
+
+        .timeline-progress {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 0%;
+            background: var(--gradient-gold-horizontal);
+            z-index: 2;
+            transition: height 1s ease;
+        }
+
+        .methodology-grid {
+            display: grid;
+            gap: var(--space-xxl);
+            position: relative;
+            z-index: 3;
+        }
+        
+        .phase {
+            background: var(--white);
+            padding: var(--space-xxl);
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid var(--border-gray);
+            will-change: transform;
+        }
+
+        .phase:nth-child(even) {
+            margin-left: 55%;
+        }
+
+        .phase:nth-child(odd) {
+            margin-right: 55%;
+        }
+
+        .phase::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-gold-horizontal);
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 2px var(--accent-gold);
+            z-index: 4;
+        }
+
+        .phase:nth-child(odd)::before {
+            right: -3.5rem;
+            transform: translateY(-50%);
+        }
+
+        .phase:nth-child(even)::before {
+            left: -3.5rem;
+            transform: translateY(-50%);
+        }
+
+        .phase::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+            transition: var(--transition-smooth);
+        }
+
+        .phase:hover::after {
+            left: 100%;
+        }
+
+        .phase:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-gold);
+        }
+
+        .phase-number {
+            display: inline-flex;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            font-size: 0.875rem;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .phase h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 500;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+            font-variation-settings: 'wght' 500;
+        }
+
+        .phase-duration {
+            display: inline-block;
+            background: var(--background-gray);
+            color: var(--medium-gray);
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-md);
+        }
+        
+        .phase-description {
+            font-size: 1rem;
+            color: var(--light-gray);
+            margin-bottom: var(--space-xl);
+            line-height: 1.8;
+        }
+
+        .phase-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+        }
+
+        .highlight-tag {
+            background: var(--background-gray);
+            color: var(--tertiary-black);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .highlight-tag i {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+        }
+
+        .highlight-tag:hover {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+        }
+        
+        .tasks-preview {
+            list-style: none;
+        }
+        
+        .tasks-preview li {
+            padding: var(--space-md) 0;
+            border-bottom: 1px solid var(--background-gray);
+            font-size: 0.9375rem;
+            color: var(--tertiary-black);
+            transition: var(--transition-fast);
+            cursor: pointer;
+            position: relative;
+            padding-left: var(--space-lg);
+        }
+
+        .tasks-preview li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            opacity: 0;
+            transition: var(--transition-fast);
+            transform: translateX(-5px);
+        }
+
+        .tasks-preview li:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .tasks-preview li:hover {
+            color: var(--primary-black);
+            padding-left: var(--space-xl);
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
+        }
+        
+        .tasks-preview li:last-child {
+            border-bottom: none;
+        }
+        
+        .expand-btn {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            font-family: inherit;
+            margin-top: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            will-change: transform;
+        }
+        
+        .expand-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        .expand-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        /* Fase detallada mejorada */
+        .detailed-phase {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            margin-top: var(--space-xl);
+            padding-top: 0;
+            border-top: 2px solid transparent;
+        }
+        
+        .detailed-phase.active {
+            max-height: 5000px;
+            padding-top: var(--space-xl);
+            border-top-color: var(--border-gray);
+        }
+
+        .detailed-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+            transition-delay: 0.3s;
+        }
+
+        .detailed-phase.active .detailed-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .phase-overview {
+            background: linear-gradient(135deg, var(--background-gray), #f0f0f0);
+            padding: var(--space-xl);
+            border-radius: var(--radius-medium);
+            margin-bottom: var(--space-xl);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .phase-overview h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+        }
+
+        .phase-overview p {
+            color: var(--light-gray);
+            line-height: 1.7;
+        }
+
+        .deliverables-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin: var(--space-md) 0;
+        }
+
+        .deliverable-chip {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8125rem;
+            color: var(--tertiary-black);
+            transition: var(--transition-fast);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .deliverable-chip i {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+        }
+
+        .deliverable-chip:hover {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            border-color: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        .deliverable-chip:hover i {
+            color: var(--white);
+        }
+        
+        .subtasks-grid {
+            display: grid;
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        @media (min-width: 768px) {
+            .subtasks-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .subtask {
+            padding: var(--space-xl);
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: var(--radius-medium);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .subtask::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-gold-horizontal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .subtask:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .subtask:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .subtask h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .subtask-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .subtask p {
+            font-size: 0.875rem;
+            color: var(--light-gray);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .subtask-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+        }
+
+        .tool-tag {
+            background: var(--background-gray);
+            color: var(--medium-gray);
+            padding: 0.25rem 0.625rem;
+            border-radius: var(--radius-small);
+            font-size: 0.6875rem;
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+
+        .tool-tag:hover {
+            background: var(--accent-gold);
+            color: var(--white);
+        }
+
+        /* Herramientas interactivas */
+        .tools-showcase {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tools-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 25%);
+            z-index: 1;
+        }
+
+        .tools-showcase-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tools-showcase h3 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 300;
+            margin-bottom: var(--space-md);
+            letter-spacing: -0.02em;
+            font-variation-settings: 'wght' 300;
+        }
+
+        .tools-showcase p {
+            color: var(--soft-gray);
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .tools-grid-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+            margin: var(--space-xxl) 0;
+        }
+
+        .tool-showcase-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--radius-large);
+            padding: var(--space-xxl) var(--space-xl);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            will-change: transform;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-showcase-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .tool-showcase-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-showcase-card:hover::before {
+            opacity: 1;
+        }
+
+        .tool-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-gold-horizontal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: var(--transition-bounce);
+        }
+
+        .tool-showcase-card:hover .tool-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .tool-showcase-card h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+
+        .tool-showcase-card p {
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+            line-height: 1.6;
+            margin-bottom: var(--space-md);
+        }
+
+        .tools-launch-btn {
+            background: var(--white);
+            color: var(--primary-black);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: var(--radius-full);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            will-change: transform;
+        }
+
+        .tools-launch-btn:hover {
+            background: var(--accent-gold);
+            color: var(--white);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Sección de progreso mejorada */
+        .progress-section {
+            padding: 6rem 0;
+            background: var(--gradient-primary);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-8.5-6.5-15-15-15s-15 6.5-15 15 6.5 15 15 15 15-6.5 15-15zm15 0c0-8.5-6.5-15-15-15s-15 6.5-15 15 6.5 15 15 15 15-6.5 15-15z'/%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: backgroundMove 30s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes backgroundMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
+        
+        .progress-content {
+            display: grid;
+            align-items: center;
+            gap: var(--space-xxl);
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .progress-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .progress-info h3 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 300;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+            font-variation-settings: 'wght' 300;
+        }
+        
+        .progress-info p {
+            color: var(--soft-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-xl);
+        }
+
+        .progress-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin: var(--space-xl) 0;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: var(--space-lg);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-medium);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: var(--transition-smooth);
+        }
+
+        .metric-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: var(--accent-gold);
+            margin-bottom: var(--space-sm);
+            font-variation-settings: 'wght' 200;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--soft-gray);
+            font-weight: 600;
+        }
+
+        .progress-features {
+            list-style: none;
+            margin-top: var(--space-lg);
+        }
+
+        .progress-features li {
+            padding: var(--space-sm) 0;
+            color: var(--soft-gray);
+            font-size: 0.9375rem;
+            position: relative;
+            padding-left: var(--space-xl);
+            transition: var(--transition-fast);
+        }
+
+        .progress-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .progress-features li:hover {
+            color: var(--white);
+            padding-left: var(--space-xxl);
+        }
+        
+        .counter-display {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--space-xxl);
+            border-radius: var(--radius-large);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: var(--transition-smooth);
+        }
+
+        .counter-display:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        .counter-number {
+            font-size: 6rem;
+            font-weight: 100;
+            line-height: 1;
+            margin-bottom: var(--space-md);
+            transition: var(--transition-smooth);
+            background: var(--gradient-gold-horizontal);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-variation-settings: 'wght' 100;
+        }
+
+        .counter-number.pulse {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .counter-label {
+            font-size: 0.875rem;
+            color: var(--soft-gray);
+            margin-bottom: var(--space-xl);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: var(--space-lg) 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-gold-horizontal);
+            transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border-radius: 3px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        .counter-controls {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .counter-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: var(--radius-full);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            will-change: transform;
+        }
+        
+        .counter-btn:hover {
+            background: var(--accent-gold);
+            border-color: var(--accent-gold);
+            color: var(--white);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Sección de herramientas mejorada */
+        .tools-section {
+            padding: 8rem 0;
+            background: var(--background-gray);
+            position: relative;
+        }
+
+        .tools-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+        
+        .tools-grid {
+            display: grid;
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+
+        @media (min-width: 768px) {
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .tools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .tool-category {
+            background: var(--white);
+            padding: var(--space-xxl);
+            border-radius: var(--radius-large);
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-gray);
+            will-change: transform;
+        }
+
+        .tool-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold-horizontal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition-smooth);
+        }
+
+        .tool-category::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 50px 50px 0;
+            border-color: transparent var(--accent-gold) transparent transparent;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .tool-category:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-gold);
+        }
+
+        .tool-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .tool-category:hover::after {
+            opacity: 0.3;
+        }
+
+        .tool-category-icon {
+            width: 4.5rem;
+            height: 4.5rem;
+            background: var(--gradient-gold-horizontal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            transition: var(--transition-bounce);
+        }
+
+        .tool-category:hover .tool-category-icon {
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        .tool-category h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+        }
+
+        .tool-category-desc {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            margin-bottom: var(--space-xl);
+            line-height: 1.6;
+        }
+        
+        .tool-list {
+            list-style: none;
+        }
+        
+        .tool-list li {
+            padding: var(--space-md) 0;
+            color: var(--light-gray);
+            font-size: 0.9375rem;
+            border-bottom: 1px solid var(--background-gray);
+            transition: var(--transition-fast);
+            cursor: pointer;
+            position: relative;
+            padding-left: var(--space-lg);
+        }
+
+        .tool-list li::before {
+            content: '◆';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            opacity: 0;
+            transition: var(--transition-fast);
+            transform: scale(0.5);
+        }
+
+        .tool-list li:hover {
+            color: var(--primary-black);
+            padding-left: var(--space-xl);
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
+        }
+
+        .tool-list li:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .tool-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tool-launch {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 0.75rem 1.5rem;
+            margin-top: var(--space-lg);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            will-change: transform;
+        }
+
+        .tool-launch:hover {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Sección de entregables mejorada */
+        .deliverables-section {
+            padding: 8rem 0;
+            background: var(--white);
+            position: relative;
+        }
+
+        .deliverables-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+        }
+        
+        .deliverable-grid {
+            display: grid;
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+
+        @media (min-width: 768px) {
+            .deliverable-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .deliverable-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .deliverable-item {
+            background: var(--white);
+            padding: var(--space-xxl);
+            border: 2px solid var(--border-gray);
+            border-radius: var(--radius-large);
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .deliverable-item::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--gradient-gold-horizontal);
+            border-radius: var(--radius-large);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: -1;
+        }
+
+        .deliverable-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: var(--shadow-hover);
+            border-color: transparent;
+            color: var(--white);
+        }
+
+        .deliverable-item:hover::before {
+            opacity: 1;
+        }
+
+        .deliverable-item:hover .deliverable-number,
+        .deliverable-item:hover h3,
+        .deliverable-item:hover p,
+        .deliverable-item:hover .deliverable-features li {
+            color: var(--white);
+        }
+
+        .deliverable-number {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin: 0 auto var(--space-lg);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            transition: var(--transition-smooth);
+        }
+
+        .deliverable-item:hover .deliverable-number {
+            transform: rotate(15deg) scale(1.1);
+            background: var(--white);
+            color: var(--accent-gold);
+        }
+        
+        .deliverable-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+            position: relative;
+            z-index: 2;
+            transition: var(--transition-fast);
+        }
+        
+        .deliverable-item p {
+            font-size: 0.9375rem;
+            color: var(--light-gray);
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+            margin-bottom: var(--space-md);
+            transition: var(--transition-fast);
+        }
+
+        .deliverable-features {
+            list-style: none;
+            text-align: left;
+            margin: var(--space-lg) 0;
+        }
+
+        .deliverable-features li {
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+            position: relative;
+            padding-left: var(--space-lg);
+            transition: var(--transition-fast);
+        }
+
+        .deliverable-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: 700;
+            transition: var(--transition-fast);
+        }
+
+        .deliverable-item:hover .deliverable-features li::before {
+            color: var(--white);
+        }
+
+        .deliverable-preview {
+            background: var(--background-gray);
+            border: none;
+            padding: 0.625rem 1.25rem;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--medium-gray);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            will-change: transform;
+        }
+
+        .deliverable-preview:hover {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Zonas interactivas mejoradas */
+        .interaction-zone {
+            background: linear-gradient(135deg, var(--background-gray) 0%, #f0f0f0 100%);
+            border: 3px dashed var(--border-gray);
+            border-radius: var(--radius-large);
+            padding: var(--space-xxl);
+            text-align: center;
+            margin: var(--space-xxl) 0;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .interaction-zone::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: var(--transition-smooth);
+        }
+
+        .interaction-zone:hover::before {
+            left: 100%;
+        }
+
+        .interaction-zone:hover {
+            border-color: var(--accent-gold);
+            background: linear-gradient(135deg, #f0f0f0 0%, var(--background-gray) 100%);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .interaction-icon {
+            width: 5rem;
+            height: 5rem;
+            background: var(--gradient-gold-horizontal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-lg);
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transition: var(--transition-bounce);
+        }
+
+        .interaction-zone:hover .interaction-icon {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .interaction-zone h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--primary-black);
+        }
+
+        .interaction-zone p {
+            color: var(--light-gray);
+            margin-bottom: var(--space-xl);
+            font-size: 1rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .interaction-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .interaction-btn {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            border: none;
+            padding: 0.875rem 1.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: var(--radius-full);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            will-change: transform;
+        }
+
+        .interaction-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        .interaction-btn.secondary {
+            background: transparent;
+            color: var(--primary-black);
+            border: 2px solid var(--primary-black);
+            box-shadow: none;
+        }
+
+        .interaction-btn.secondary:hover {
+            background: var(--primary-black);
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer mejorado */
+        footer {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 6rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold-horizontal);
+        }
+
+        footer::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            gap: var(--space-xxl);
+            margin-bottom: var(--space-xxl);
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            color: var(--white);
+            position: relative;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 2rem;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .footer-section p {
+            font-size: 0.9375rem;
+            color: var(--soft-gray);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 0.625rem 0;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-size: 0.9375rem;
+            color: var(--soft-gray);
+            position: relative;
+            padding-left: var(--space-md);
+        }
+
+        .footer-section ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: var(--transition-fast);
+            color: var(--accent-gold);
+        }
+
+        .footer-section ul li:hover {
+            color: var(--white);
+            padding-left: var(--space-lg);
+        }
+
+        .footer-section ul li:hover::before {
+            opacity: 1;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--soft-gray);
+            transition: var(--transition-fast);
+            font-size: 0.9375rem;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-gold);
+        }
+
+        .contact-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--gradient-gold-horizontal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            font-size: 1rem;
+            will-change: transform;
+        }
+
+        .social-link:hover {
+            background: var(--gradient-gold-horizontal);
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-xl);
+            border-top: 1px solid var(--tertiary-black);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-bottom p {
+            font-size: 0.875rem;
+            color: var(--medium-gray);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: var(--space-sm);
+            display: inline-block;
+        }
+
+        .footer-cta {
+            margin-top: var(--space-lg);
+        }
+        
+        /* Modal mejorado */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            overflow-y: auto;
+            padding: var(--space-xl);
+        }
+        
+        .modal.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: var(--white);
+            max-width: 900px;
+            width: 95%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: var(--space-xxl);
+            position: relative;
+            border-radius: var(--radius-large);
+            transform: translateY(50px) scale(0.9);
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-intense);
+            will-change: transform;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: var(--space-lg);
+            right: var(--space-lg);
+            background: var(--background-gray);
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: var(--medium-gray);
+            transition: var(--transition-smooth);
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 700;
+            will-change: transform;
+        }
+
+        .modal-close:hover {
+            background: var(--gradient-gold-horizontal);
+            color: var(--white);
+            transform: rotate(90deg);
+        }
+        
+        .modal h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            color: var(--primary-black);
+            border-bottom: 3px solid var(--accent-gold);
+            padding-bottom: var(--space-md);
+            position: relative;
+        }
+
+        .modal h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 3rem;
+            height: 3px;
+            background: var(--gradient-gold-horizontal);
+        }
+
+        .modal h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin: var(--space-xl) 0 var(--space-md);
+            color: var(--primary-black);
+        }
+
+        .modal h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: var(--space-lg) 0 var(--space-sm);
+            color: var(--tertiary-black);
+        }
+        
+        .modal ul {
+            margin: var(--space-lg) 0;
+            padding-left: var(--space-lg);
+        }
+        
+        .modal li {
+            margin: var(--space-sm) 0;
+            color: var(--light-gray);
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .modal li::marker {
+            color: var(--accent-gold);
+        }
+
+        .modal p {
+            margin: var(--space-md) 0;
+            color: var(--light-gray);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .modal-section {
+            margin: var(--space-xl) 0;
+            padding: var(--space-lg);
+            background: var(--background-gray);
+            border-left: 5px solid var(--accent-gold);
+            border-radius: 0 var(--radius-medium) var(--radius-medium) 0;
+        }
+
+        .modal-section h4 {
+            color: var(--primary-black);
+            margin-bottom: var(--space-md);
+        }
+
+        .modal-image {
+            width: 100%;
+            border-radius: var(--radius-medium);
+            margin: var(--space-lg) 0;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .modal-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Animaciones mejoradas */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pulse {
+            animation: pulse 2s ease infinite;
+        }
+
+        /* Efectos de hover mejorados */
+        .hover-grow {
+            transition: var(--transition-smooth);
+            will-change: transform;
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+        }
+
+        .hover-lift {
+            transition: var(--transition-smooth);
+            will-change: transform;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive design mejorado */
+        @media (max-width: 1200px) {
+            .methodology-grid .phase:nth-child(even),
+            .methodology-grid .phase:nth-child(odd) {
+                margin-left: 50%;
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .methodology-grid .phase:nth-child(even),
+            .methodology-grid .phase:nth-child(odd) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .phase::before {
+                display: none;
+            }
+
+            .timeline-line,
+            .timeline-progress {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container,
+            .container-narrow {
+                padding: 0 var(--space-lg);
+            }
+
+            .hero {
+                padding: 8rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: var(--space-md);
+            }
+
+            .hero-btn {
+                width: 100%;
+            }
+
+            nav ul {
+                gap: var(--space-lg);
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .progress-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+
+            .counter-display {
+                margin-top: var(--space-xl);
+            }
+
+            .tools-grid,
+            .deliverable-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                flex-direction: column;
+                gap: var(--space-md);
+                padding: var(--space-md) 0;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--space-md);
+            }
+
+            .hero {
+                padding: 6rem 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .modal-content {
+                padding: var(--space-xl);
+            }
+        }
+
+        /* Clases utilitarias */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gold {
+            color: var(--accent-gold);
+        }
+
+        .bg-dark {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        .mt-0 { margin-top: 0 !important; }
+        .mt-1 { margin-top: var(--space-xs) !important; }
+        .mt-2 { margin-top: var(--space-sm) !important; }
+        .mt-3 { margin-top: var(--space-md) !important; }
+        .mt-4 { margin-top: var(--space-lg) !important; }
+        .mt-5 { margin-top: var(--space-xl) !important; }
+        .mt-6 { margin-top: var(--space-xxl) !important; }
+
+        .mb-0 { margin-bottom: 0 !important; }
+        .mb-1 { margin-bottom: var(--space-xs) !important; }
+        .mb-2 { margin-bottom: var(--space-sm) !important; }
+        .mb-3 { margin-bottom: var(--space-md) !important; }
+        .mb-4 { margin-bottom: var(--space-lg) !important; }
+        .mb-5 { margin-bottom: var(--space-xl) !important; }
+        .mb-6 { margin-bottom: var(--space-xxl) !important; }
+
+        .py-1 { padding-top: var(--space-xs) !important; padding-bottom: var(--space-xs) !important; }
+        .py-2 { padding-top: var(--space-sm) !important; padding-bottom: var(--space-sm) !important; }
+        .py-3 { padding-top: var(--space-md) !important; padding-bottom: var(--space-md) !important; }
+        .py-4 { padding-top: var(--space-lg) !important; padding-bottom: var(--space-lg) !important; }
+        .py-5 { padding-top: var(--space-xl) !important; padding-bottom: var(--space-xl) !important; }
+        .py-6 { padding-top: var(--space-xxl) !important; padding-bottom: var(--space-xxl) !important; }
+    </style>
+</head>
+<body>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator"></div>
+    
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <span class="logo-icon">B</span>
+                    <span>BrandSystem</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#methodology" class="active">Metodología</a></li>
+                        <li><a href="#tools">Herramientas</a></li>
+                        <li><a href="#deliverables">Entregables</a></li>
+                        <li><a href="#progress">Progreso</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                        <li><button class="btn btn-primary" id="open-modal">Iniciar Proyecto</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Construye una marca <span>poderosa</span> y memorable</h1>
+                <p>Nuestro sistema profesional de branding te guía paso a paso en la creación de una identidad de marca sólida, coherente y efectiva que conecta con tu audiencia.</p>
+                <div class="hero-buttons">
+                    <button class="hero-btn primary">Comenzar Ahora</button>
+                    <button class="hero-btn secondary">Ver Demo</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Marcas Desarrolladas</div>
+                        <div class="stat-description">Hemos ayudado a más de 150 empresas a construir su identidad visual</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="92">0</div>
+                        <div class="stat-label">Satisfacción Clientes</div>
+                        <div class="stat-description">El 92% de nuestros clientes recomiendan nuestro sistema de branding</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Fases Comprobadas</div>
+                        <div class="stat-description">Metodología en 5 fases probada con más de 10 años de experiencia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Entregables Clave</div>
+                        <div class="stat-description">Todos los elementos necesarios para una identidad de marca completa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Methodology Section -->
+        <section class="methodology-section" id="methodology">
+            <div class="container-narrow">
+                <div class="section-header">
+                    <h2>Nuestra <span>Metodología</span> de Branding</h2>
+                    <p>Un proceso sistemático y probado para desarrollar marcas que destacan, conectan y perduran en el tiempo.</p>
+                </div>
+                
+                <div class="methodology-timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-progress"></div>
+                    
+                    <div class="methodology-grid">
+                        <!-- Phase 1 -->
+                        <div class="phase" id="phase-1">
+                            <div class="phase-number">1</div>
+                            <h3>Descubrimiento & Investigación</h3>
+                            <span class="phase-duration">1-2 semanas</span>
+                            <p class="phase-description">Profundizamos en tu negocio, mercado y audiencia para sentar las bases estratégicas de tu marca.</p>
+                            
+                            <div class="phase-highlights">
+                                <span class="highlight-tag"><i>✓</i> Análisis Competitivo</span>
+                                <span class="highlight-tag"><i>✓</i> Buyer Personas</span>
+                                <span class="highlight-tag"><i>✓</i> Propuesta de Valor</span>
+                            </div>
+                            
+                            <ul class="tasks-preview">
+                                <li>Entrevistas con stakeholders</li>
+                                <li>Auditoría de marca existente</li>
+                                <li>Análisis de mercado y tendencias</li>
+                                <li>Definición de objetivos de marca</li>
+                            </ul>
+                            
+                            <button class="expand-btn" data-phase="1">Ver Detalles <i>▼</i></button>
+                            
+                            <div class="detailed-phase" id="detailed-phase-1">
+                                <div class="detailed-content">
+                                    <div class="phase-overview">
+                                        <h4>Descripción General</h4>
+                                        <p>La fase de descubrimiento es fundamental para entender el contexto en el que existirá tu marca. Investigamos a fondo tu industria, competidores y audiencia objetivo para identificar oportunidades únicas de diferenciación.</p>
+                                    </div>
+                                    
+                                    <h4>Entregables Clave</h4>
+                                    <div class="deliverables-preview">
+                                        <span class="deliverable-chip"><i>✓</i> Informe de Investigación</span>
+                                        <span class="deliverable-chip"><i>✓</i> Buyer Personas</span>
+                                        <span class="deliverable-chip"><i>✓</i> Mapa de Competidores</span>
+                                        <span class="deliverable-chip"><i>✓</i> Propuesta de Valor</span>
+                                    </div>
+                                    
+                                    <h4>Sub-tareas y Procesos</h4>
+                                    <div class="subtasks-grid">
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">1</span> Entrevistas con Stakeholders</h4>
+                                            <p>Sesiones detalladas con fundadores, equipo directivo y empleados clave para entender la visión y cultura de la organización.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Guía de Preguntas</span>
+                                                <span class="tool-tag">Grabación</span>
+                                                <span class="tool-tag">Análisis</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">2</span> Auditoría de Marca Existente</h4>
+                                            <p>Evaluación completa de los activos de marca actuales (si existen) para identificar fortalezas, debilidades y oportunidades.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Checklist</span>
+                                                <span class="tool-tag">SWOT</span>
+                                                <span class="tool-tag">Benchmarking</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">3</span> Investigación de Mercado</h4>
+                                            <p>Análisis del panorama competitivo, tendencias del sector y comportamiento del consumidor en tu industria.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Google Trends</span>
+                                                <span class="tool-tag">Statista</span>
+                                                <span class="tool-tag">SEMrush</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">4</span> Definición de Buyer Personas</h4>
+                                            <p>Creación de perfiles detallados de tus clientes ideales basados en datos demográficos, psicográficos y comportamentales.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Encuestas</span>
+                                                <span class="tool-tag">Entrevistas</span>
+                                                <span class="tool-tag">Plantilla Persona</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 2 -->
+                        <div class="phase" id="phase-2">
+                            <div class="phase-number">2</div>
+                            <h3>Estrategia de Marca</h3>
+                            <span class="phase-duration">2-3 semanas</span>
+                            <p class="phase-description">Desarrollamos los pilares fundamentales de tu marca: propósito, posicionamiento, personalidad y mensaje central.</p>
+                            
+                            <div class="phase-highlights">
+                                <span class="highlight-tag"><i>✓</i> Arquitectura de Marca</span>
+                                <span class="highlight-tag"><i>✓</i> Posicionamiento</span>
+                                <span class="highlight-tag"><i>✓</i> Voice & Tone</span>
+                            </div>
+                            
+                            <ul class="tasks-preview">
+                                <li>Definición de propósito y valores</li>
+                                <li>Arquitectura de marca</li>
+                                <li>Estrategia de posicionamiento</li>
+                                <li>Desarrollo de mensaje clave</li>
+                            </ul>
+                            
+                            <button class="expand-btn" data-phase="2">Ver Detalles <i>▼</i></button>
+                            
+                            <div class="detailed-phase" id="detailed-phase-2">
+                                <div class="detailed-content">
+                                    <div class="phase-overview">
+                                        <h4>Descripción General</h4>
+                                        <p>En esta fase transformamos los insights de la investigación en una estrategia de marca clara y diferenciada. Definimos los elementos fundamentales que guiarán todas las expresiones de tu marca.</p>
+                                    </div>
+                                    
+                                    <h4>Entregables Clave</h4>
+                                    <div class="deliverables-preview">
+                                        <span class="deliverable-chip"><i>✓</i> Documento de Estrategia</span>
+                                        <span class="deliverable-chip"><i>✓</i> Posicionamiento</span>
+                                        <span class="deliverable-chip"><i>✓</i> Arquitectura</span>
+                                        <span class="deliverable-chip"><i>✓</i> Voice & Tone</span>
+                                    </div>
+                                    
+                                    <h4>Sub-tareas y Procesos</h4>
+                                    <div class="subtasks-grid">
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">1</span> Propósito y Valores</h4>
+                                            <p>Definición del "por qué" fundamental de tu marca y los principios que guiarán cada decisión y acción.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Workshops</span>
+                                                <span class="tool-tag">Golden Circle</span>
+                                                <span class="tool-tag">Card Sorting</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">2</span> Posicionamiento de Marca</h4>
+                                            <p>Desarrollo de un posicionamiento único que diferencie tu marca en la mente de tu audiencia objetivo.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Matriz de Posicionamiento</span>
+                                                <span class="tool-tag">Perceptual Map</span>
+                                                <span class="tool-tag">Value Proposition Canvas</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">3</span> Arquitectura de Marca</h4>
+                                            <p>Estructuración de la relación entre marcas, sub-marcas, productos y servicios en tu ecosistema.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Brand Architecture Models</span>
+                                                <span class="tool-tag">Naming Strategy</span>
+                                                <span class="tool-tag">Taxonomía</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">4</span> Voz y Tono</h4>
+                                            <p>Definición de la personalidad verbal de tu marca y cómo se adapta a diferentes contextos y audiencias.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Brand Personality Spectrum</span>
+                                                <span class="tool-tag">Tone Matrix</span>
+                                                <span class="tool-tag">Ejemplos</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 3 -->
+                        <div class="phase" id="phase-3">
+                            <div class="phase-number">3</div>
+                            <h3>Diseño de Identidad</h3>
+                            <span class="phase-duration">3-4 semanas</span>
+                            <p class="phase-description">Creamos los elementos visuales que darán vida a tu marca: logo, paleta de colores, tipografía y sistema gráfico.</p>
+                            
+                            <div class="phase-highlights">
+                                <span class="highlight-tag"><i>✓</i> Diseño de Logo</span>
+                                <span class="highlight-tag"><i>✓</i> Sistema de Color</span>
+                                <span class="highlight-tag"><i>✓</i> Tipografía</span>
+                            </div>
+                            
+                            <ul class="tasks-preview">
+                                <li>Exploración conceptual</li>
+                                <li>Diseño de logotipo</li>
+                                <li>Desarrollo de sistema de color</li>
+                                <li>Selección tipográfica</li>
+                            </ul>
+                            
+                            <button class="expand-btn" data-phase="3">Ver Detalles <i>▼</i></button>
+                            
+                            <div class="detailed-phase" id="detailed-phase-3">
+                                <div class="detailed-content">
+                                    <div class="phase-overview">
+                                        <h4>Descripción General</h4>
+                                        <p>Transformamos la estrategia de marca en una identidad visual impactante y coherente. Cada elemento de diseño se crea para comunicar visualmente los valores y personalidad de tu marca.</p>
+                                    </div>
+                                    
+                                    <h4>Entregables Clave</h4>
+                                    <div class="deliverables-preview">
+                                        <span class="deliverable-chip"><i>✓</i> Sistema de Logo</span>
+                                        <span class="deliverable-chip"><i>✓</i> Paleta de Colores</span>
+                                        <span class="deliverable-chip"><i>✓</i> Tipografía</span>
+                                        <span class="deliverable-chip"><i>✓</i> Sistema Gráfico</span>
+                                    </div>
+                                    
+                                    <h4>Sub-tareas y Procesos</h4>
+                                    <div class="subtasks-grid">
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">1</span> Exploración Conceptual</h4>
+                                            <p>Generación de múltiples direcciones creativas basadas en la estrategia de marca definida.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Moodboards</span>
+                                                <span class="tool-tag">Sketching</span>
+                                                <span class="tool-tag">Concept Mapping</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">2</span> Diseño de Logotipo</h4>
+                                            <p>Creación de un sistema de logo versátil que funcione en múltiples tamaños y aplicaciones.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Adobe Illustrator</span>
+                                                <span class="tool-tag">Grid Systems</span>
+                                                <span class="tool-tag">Testing</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">3</span> Sistema de Color</h4>
+                                            <p>Desarrollo de una paleta estratégica que comunica la personalidad de la marca y mejora la legibilidad.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Color Theory</span>
+                                                <span class="tool-tag">Contrast Checker</span>
+                                                <span class="tool-tag">Accessibility</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">4</span> Sistema Tipográfico</h4>
+                                            <p>Selección de familias tipográficas que refuercen la personalidad de la marca y sean funcionales.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Type Classification</span>
+                                                <span class="tool-tag">Pairing</span>
+                                                <span class="tool-tag">Hierarchy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 4 -->
+                        <div class="phase" id="phase-4">
+                            <div class="phase-number">4</div>
+                            <h3>Implementación</h3>
+                            <span class="phase-duration">2-4 semanas</span>
+                            <p class="phase-description">Aplicamos la identidad de marca de manera consistente en todos los puntos de contacto con tu audiencia.</p>
+                            
+                            <div class="phase-highlights">
+                                <span class="highlight-tag"><i>✓</i> Diseño Web</span>
+                                <span class="highlight-tag"><i>✓</i> Materiales de Marketing</span>
+                                <span class="highlight-tag"><i>✓</i> Redes Sociales</span>
+                            </div>
+                            
+                            <ul class="tasks-preview">
+                                <li>Diseño de sitio web</li>
+                                <li>Materiales impresos</li>
+                                <li>Plantillas digitales</li>
+                                <li>Guías de implementación</li>
+                            </ul>
+                            
+                            <button class="expand-btn" data-phase="4">Ver Detalles <i>▼</i></button>
+                            
+                            <div class="detailed-phase" id="detailed-phase-4">
+                                <div class="detailed-content">
+                                    <div class="phase-overview">
+                                        <h4>Descripción General</h4>
+                                        <p>Llevamos la identidad de marca a la vida aplicándola de manera consistente en todos los puntos de contacto con tus clientes, desde tu sitio web hasta el empaque de productos.</p>
+                                    </div>
+                                    
+                                    <h4>Entregables Clave</h4>
+                                    <div class="deliverables-preview">
+                                        <span class="deliverable-chip"><i>✓</i> Sitio Web</span>
+                                        <span class="deliverable-chip"><i>✓</i> Materiales Impresos</span>
+                                        <span class="deliverable-chip"><i>✓</i> Plantillas Digitales</span>
+                                        <span class="deliverable-chip"><i>✓</i> Brand Guidelines</span>
+                                    </div>
+                                    
+                                    <h4>Sub-tareas y Procesos</h4>
+                                    <div class="subtasks-grid">
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">1</span> Diseño de Sitio Web</h4>
+                                            <p>Creación de una experiencia digital coherente con la identidad de marca y optimizada para conversión.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Wireframing</span>
+                                                <span class="tool-tag">UI Design</span>
+                                                <span class="tool-tag">Prototyping</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">2</span> Materiales de Marketing</h4>
+                                            <p>Diseño de folletos, presentaciones, banners y otros materiales de marketing con la nueva identidad.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">InDesign</span>
+                                                <span class="tool-tag">Print Production</span>
+                                                <span class="tool-tag">Bleed & Margins</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">3</span> Plantillas Digitales</h4>
+                                            <p>Creación de plantillas para email, redes sociales y documentos para mantener consistencia.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Canva</span>
+                                                <span class="tool-tag">Google Slides</span>
+                                                <span class="tool-tag">Microsoft Office</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">4</span> Brand Guidelines</h4>
+                                            <p>Documentación exhaustiva sobre cómo aplicar correctamente todos los elementos de la marca.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">PDF Interactive</span>
+                                                <span class="tool-tag">Examples</span>
+                                                <span class="tool-tag">Dos & Don'ts</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Phase 5 -->
+                        <div class="phase" id="phase-5">
+                            <div class="phase-number">5</div>
+                            <h3>Lanzamiento & Gestión</h3>
+                            <span class="phase-duration">1-3 semanas</span>
+                            <p class="phase-description">Planificamos el lanzamiento de tu nueva marca y establecemos procesos para mantener su consistencia a largo plazo.</p>
+                            
+                            <div class="phase-highlights">
+                                <span class="highlight-tag"><i>✓</i> Plan de Lanzamiento</span>
+                                <span class="highlight-tag"><i>✓</i> Capacitación</span>
+                                <span class="highlight-tag"><i>✓</i> Monitoreo</span>
+                            </div>
+                            
+                            <ul class="tasks-preview">
+                                <li>Plan de lanzamiento</li>
+                                <li>Capacitación del equipo</li>
+                                <li>Monitoreo de implementación</li>
+                                <li>Evaluación de resultados</li>
+                            </ul>
+                            
+                            <button class="expand-btn" data-phase="5">Ver Detalles <i>▼</i></button>
+                            
+                            <div class="detailed-phase" id="detailed-phase-5">
+                                <div class="detailed-content">
+                                    <div class="phase-overview">
+                                        <h4>Descripción General</h4>
+                                        <p>Garantizamos una transición fluida a la nueva identidad de marca con un lanzamiento estratégico y herramientas para mantener la coherencia a medida que tu negocio crece.</p>
+                                    </div>
+                                    
+                                    <h4>Entregables Clave</h4>
+                                    <div class="deliverables-preview">
+                                        <span class="deliverable-chip"><i>✓</i> Plan de Lanzamiento</span>
+                                        <span class="deliverable-chip"><i>✓</i> Kit de Herramientas</span>
+                                        <span class="deliverable-chip"><i>✓</i> Sesión de Capacitación</span>
+                                        <span class="deliverable-chip"><i>✓</i> Reporte Inicial</span>
+                                    </div>
+                                    
+                                    <h4>Sub-tareas y Procesos</h4>
+                                    <div class="subtasks-grid">
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">1</span> Estrategia de Lanzamiento</h4>
+                                            <p>Desarrollo de un plan detallado para introducir la nueva marca a diferentes audiencias.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Timeline</span>
+                                                <span class="tool-tag">Audience Mapping</span>
+                                                <span class="tool-tag">Communication Plan</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">2</span> Brand Asset Management</h4>
+                                            <p>Organización y distribución de todos los activos de marca para acceso y uso fácil por parte del equipo.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Digital Asset Management</span>
+                                                <span class="tool-tag">Cloud Storage</span>
+                                                <span class="tool-tag">Permission System</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">3</span> Capacitación del Equipo</h4>
+                                            <p>Sesiones de entrenamiento para garantizar que todos los departamentos comprendan y apliquen correctamente la nueva identidad.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Workshops</span>
+                                                <span class="tool-tag">Video Tutorials</span>
+                                                <span class="tool-tag">Q&A Sessions</span>
+                                            </div>
+                                        </div>
+                                        <div class="subtask">
+                                            <h4><span class="subtask-icon">4</span> Monitoreo y Ajustes</h4>
+                                            <p>Seguimiento de la implementación y realización de ajustes necesarios basados en feedback y resultados.</p>
+                                            <div class="subtask-tools">
+                                                <span class="tool-tag">Surveys</span>
+                                                <span class="tool-tag">Analytics</span>
+                                                <span class="tool-tag">Brand Audits</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Tools Section -->
+        <section class="tools-showcase">
+            <div class="container">
+                <div class="tools-showcase-content">
+                    <h3>Herramientas Interactivas de Branding</h3>
+                    <p>Accede a nuestro conjunto exclusivo de herramientas digitales diseñadas para agilizar y mejorar cada etapa del proceso de desarrollo de marca.</p>
+                    
+                    <div class="tools-grid-showcase">
+                        <div class="tool-showcase-card">
+                            <div class="tool-icon">B</div>
+                            <h4>Brand Strategy Generator</h4>
+                            <p>Guía interactiva para definir los pilares fundamentales de tu marca con ejercicios prácticos y ejemplos.</p>
+                            <button class="tools-launch-btn">Probar Herramienta</button>
+                        </div>
+                        <div class="tool-showcase-card">
+                            <div class="tool-icon">C</div>
+                            <h4>Color Palette Explorer</h4>
+                            <p>Sistema inteligente para crear paletas de color armoniosas y accesibles que reflejen tu marca.</p>
+                            <button class="tools-launch-btn">Probar Herramienta</button>
+                        </div>
+                        <div class="tool-showcase-card">
+                            <div class="tool-icon">T</div>
+                            <h4>Typography Matcher</h4>
+                            <p>Encuentra combinaciones tipográficas perfectas basadas en la personalidad de tu marca.</p>
+                            <button class="tools-launch-btn">Probar Herramienta</button>
+                        </div>
+                    </div>
+                    
+                    <div class="interaction-zone">
+                        <div class="interaction-icon">?</div>
+                        <h4>¿No encuentras lo que necesitas?</h4>
+                        <p>Nuestro equipo puede crear herramientas personalizadas adaptadas a las necesidades específicas de tu marca y flujo de trabajo.</p>
+                        <div class="interaction-buttons">
+                            <button class="interaction-btn">Solicitar Demo</button>
+                            <button class="interaction-btn secondary">Contactar Equipo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Progress Tracking Section -->
+        <section class="progress-section" id="progress">
+            <div class="container">
+                <div class="progress-content">
+                    <div class="progress-info">
+                        <h3>Seguimiento de Progreso en Tiempo Real</h3>
+                        <p>Nuestro sistema de dashboard te permite monitorear el avance de tu proyecto de branding, con métricas clave y actualizaciones automáticas.</p>
+                        
+                        <div class="progress-metrics">
+                            <div class="metric-item">
+                                <div class="metric-number" id="completed-phases">0</div>
+                                <div class="metric-label">Fases Completadas</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number" id="deliverables-done">0</div>
+                                <div class="metric-label">Entregables</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number" id="team-members">0</div>
+                                <div class="metric-label">Miembros</div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-number" id="days-left">0</div>
+                                <div class="metric-label">Días Restantes</div>
+                            </div>
+                        </div>
+                        
+                        <ul class="progress-features">
+                            <li>Actualizaciones en tiempo real del estado del proyecto</li>
+                            <li>Notificaciones cuando se completen hitos importantes</li>
+                            <li>Acceso a todos los entregables desde un solo lugar</li>
+                            <li>Comunicación directa con tu equipo de branding</li>
+                            <li>Reportes semanales de progreso automáticos</li>
+                        </ul>
+                        
+                        <button class="btn btn-primary">Acceder al Dashboard</button>
+                    </div>
+                    
+                    <div class="counter-display">
+                        <div class="counter-number" id="progress-percent">0</div>
+                        <div class="counter-label">Progreso Total del Proyecto</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="counter-controls">
+                            <button class="counter-btn" id="simulate-progress">Simular Progreso</button>
+                            <button class="counter-btn" id="reset-progress">Reiniciar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tools Section -->
+        <section class="tools-section" id="tools">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kit Completo de <span>Herramientas</span></h2>
+                    <p>Todos los recursos que necesitas para desarrollar, implementar y mantener una identidad de marca poderosa y coherente.</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-category">
+                        <div class="tool-category-icon">S</div>
+                        <h3>Estrategia</h3>
+                        <p class="tool-category-desc">Herramientas para definir los fundamentos estratégicos de tu marca.</p>
+                        <ul class="tool-list">
+                            <li>Brand Strategy Canvas</li>
+                            <li>Competitive Analysis Template</li>
+                            <li>Buyer Persona Builder</li>
+                            <li>Value Proposition Designer</li>
+                            <li>Brand Positioning Map</li>
+                        </ul>
+                        <button class="tool-launch">Descargar Kit <i>↓</i></button>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <div class="tool-category-icon">D</div>
+                        <h3>Diseño</h3>
+                        <p class="tool-category-desc">Recursos para crear una identidad visual impactante y memorable.</p>
+                        <ul class="tool-list">
+                            <li>Logo Design Checklist</li>
+                            <li>Color Palette Generator</li>
+                            <li>Typography Pairing Guide</li>
+                            <li>Visual Style Templates</li>
+                            <li>Icon Library</li>
+                        </ul>
+                        <button class="tool-launch">Descargar Kit <i>↓</i></button>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <div class="tool-category-icon">I</div>
+                        <h3>Implementación</h3>
+                        <p class="tool-category-desc">Plantillas y guías para aplicar tu marca consistentemente.</p>
+                        <ul class="tool-list">
+                            <li>Brand Guidelines Template</li>
+                            <li>Social Media Kit</li>
+                            <li>Email Signature Generator</li>
+                            <li>Presentation Templates</li>
+                            <li>Print Material Mockups</li>
+                        </ul>
+                        <button class="tool-launch">Descargar Kit <i>↓</i></button>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <div class="tool-category-icon">M</div>
+                        <h3>Monitoreo</h3>
+                        <p class="tool-category-desc">Sistemas para evaluar y mantener la salud de tu marca.</p>
+                        <ul class="tool-list">
+                            <li>Brand Audit Checklist</li>
+                            <li>Consistency Scorecard</li>
+                            <li>Brand Perception Survey</li>
+                            <li>Competitor Tracking</li>
+                            <li>ROI Calculator</li>
+                        </ul>
+                        <button class="tool-launch">Descargar Kit <i>↓</i></button>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <div class="tool-category-icon">C</div>
+                        <h3>Colaboración</h3>
+                        <p class="tool-category-desc">Plataformas para trabajar en equipo en tu proyecto de branding.</p>
+                        <ul class="tool-list">
+                            <li>Brand Hub Platform</li>
+                            <li>Feedback Collection Tool</li>
+                            <li>Version Control System</li>
+                            <li>Approval Workflows</li>
+                            <li>Asset Management</li>
+                        </ul>
+                        <button class="tool-launch">Acceder Plataforma <i>→</i></button>
+                    </div>
+                    
+                    <div class="tool-category">
+                        <div class="tool-category-icon">E</div>
+                        <h3>Educación</h3>
+                        <p class="tool-category-desc">Recursos para aprender y dominar los principios de branding.</p>
+                        <ul class="tool-list">
+                            <li>Branding Course</li>
+                            <li>Video Tutorials</li>
+                            <li>Case Studies</li>
+                            <li>Expert Interviews</li>
+                            <li>Trend Reports</li>
+                        </ul>
+                        <button class="tool-launch">Acceder Contenido <i>→</i></button>
+                    </div>
+                </div>
+                
+                <div class="interaction-zone">
+                    <div class="interaction-icon">+</div>
+                    <h4>¿Necesitas algo más específico?</h4>
+                    <p>Podemos desarrollar herramientas personalizadas adaptadas a las necesidades únicas de tu industria y modelo de negocio.</p>
+                    <div class="interaction-buttons">
+                        <button class="interaction-btn">Solicitar Herramienta</button>
+                        <button class="interaction-btn secondary">Ver Ejemplos</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Deliverables Section -->
+        <section class="deliverables-section" id="deliverables">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entregables de <span>Branding</span></h2>
+                    <p>Recibirás todos estos elementos cuidadosamente diseñados para construir una identidad de marca completa y profesional.</p>
+                </div>
+                
+                <div class="deliverable-grid">
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">1</div>
+                        <h3>Documento de Estrategia</h3>
+                        <p>Un informe completo que detalla los fundamentos estratégicos de tu marca, desde el propósito hasta el posicionamiento.</p>
+                        <ul class="deliverable-features">
+                            <li>Propósito y valores de marca</li>
+                            <li>Arquitectura de marca</li>
+                            <li>Posicionamiento competitivo</li>
+                            <li>Mensaje clave y tono de voz</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                    
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">2</div>
+                        <h3>Sistema de Logo</h3>
+                        <p>Un conjunto completo de variaciones de logo para diferentes usos y contextos, con guías de aplicación.</p>
+                        <ul class="deliverable-features">
+                            <li>Logo principal y alternativos</li>
+                            <li>Versiones para fondos claros/oscuros</li>
+                            <li>Icono y favicon</li>
+                            <li>Guía de espacios y tamaños mínimos</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                    
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">3</div>
+                        <h3>Paleta de Colores</h3>
+                        <p>Sistema de color estratégico con valores exactos para impresión, digital y aplicaciones específicas.</p>
+                        <ul class="deliverable-features">
+                            <li>Colores primarios y secundarios</li>
+                            <li>Combinaciones aprobadas</li>
+                            <li>Guía de accesibilidad</li>
+                            <li>Valores CMYK, RGB, HEX y Pantone</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                    
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">4</div>
+                        <h3>Sistema Tipográfico</h3>
+                        <p>Selección de fuentes principales y secundarias con jerarquías definidas para todos los medios.</p>
+                        <ul class="deliverable-features">
+                            <li>Tipografía principal y complementaria</li>
+                            <li>Jerarquías para web e impresión</li>
+                            <li>Guía de escalas y espaciado</li>
+                            <li>Alternativas gratuitas (si aplica)</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                    
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">5</div>
+                        <h3>Brand Guidelines</h3>
+                        <p>Manual completo de identidad de marca con todas las reglas y ejemplos de aplicación.</p>
+                        <ul class="deliverable-features">
+                            <li>Fundamentos estratégicos</li>
+                            <li>Normas de aplicación visual</li>
+                            <li>Ejemplos de uso correcto/incorrecto</li>
+                            <li>Plantillas básicas</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                    
+                    <div class="deliverable-item">
+                        <div class="deliverable-number">6</div>
+                        <h3>Kit de Implementación Digital</h3>
+                        <p>Todos los archivos necesarios para implementar tu marca en canales digitales.</p>
+                        <ul class="deliverable-features">
+                            <li>Plantillas para redes sociales</li>
+                            <li>Email signatures</li>
+                            <li>Presentaciones</li>
+                            <li>Documentos corporativos</li>
+                        </ul>
+                        <button class="deliverable-preview">Vista Previa <i>👁️</i></button>
+                    </div>
+                </div>
+                
+                <div class="interaction-zone">
+                    <div class="interaction-icon">!</div>
+                    <h4>¿Necesitas entregables adicionales?</h4>
+                    <p>Podemos crear elementos personalizados según los requerimientos específicos de tu industria o modelo de negocio.</p>
+                    <div class="interaction-buttons">
+                        <button class="interaction-btn">Solicitar Entregable</button>
+                        <button class="interaction-btn secondary">Ver Paquetes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final CTA Section -->
+        <section class="tools-showcase">
+            <div class="container-narrow">
+                <div class="tools-showcase-content">
+                    <h3>¿Listo para transformar tu marca?</h3>
+                    <p>Comienza tu viaje de branding hoy mismo con nuestro sistema probado y herramientas profesionales.</p>
+                    
+                    <div class="hero-buttons" style="justify-content: center; margin-top: 3rem;">
+                        <button class="hero-btn primary">Iniciar Proyecto</button>
+                        <button class="hero-btn secondary">Hablar con un Experto</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">BrandSystem</div>
+                    <p>El sistema profesional para desarrollar marcas poderosas, memorables y efectivas. Guiado por estrategas, diseñadores y expertos en branding.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i>f</i></a>
+                        <a href="#" class="social-link"><i>in</i></a>
+                        <a href="#" class="social-link"><i>ig</i></a>
+                        <a href="#" class="social-link"><i>tw</i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Metodología</h4>
+                    <ul>
+                        <li>Fase 1: Descubrimiento</li>
+                        <li>Fase 2: Estrategia</li>
+                        <li>Fase 3: Diseño</li>
+                        <li>Fase 4: Implementación</li>
+                        <li>Fase 5: Gestión</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li>Blog de Branding</li>
+                        <li>Guías Gratuitas</li>
+                        <li>Plantillas</li>
+                        <li>Webinars</li>
+                        <li>Glosario</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">@</div>
+                            <span>info@brandsystem.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">#</div>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <span>123 Brand St, Design City</span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-cta">
+                        <button class="btn btn-primary">Agendar Llamada</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 BrandSystem. Todos los derechos reservados. | <a href="#">Términos</a> | <a href="#">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            
+            <h2>Iniciar Proyecto de Branding</h2>
+            <p>Completa este formulario para comenzar tu proyecto de desarrollo de marca con nuestro sistema profesional.</p>
+            
+            <div class="modal-section">
+                <h4>Información Básica</h4>
+                <form id="project-form">
+                    <div class="form-group">
+                        <label for="company-name">Nombre de la Empresa</label>
+                        <input type="text" id="company-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industry">Industria</label>
+                        <select id="industry" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="tech">Tecnología</option>
+                            <option value="fashion">Moda</option>
+                            <option value="food">Alimentos</option>
+                            <option value="health">Salud</option>
+                            <option value="finance">Finanzas</option>
+                            <option value="other">Otra</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-scope">Alcance del Proyecto</label>
+                        <select id="project-scope" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="full">Branding Completo</option>
+                            <option value="strategy">Solo Estrategia</option>
+                            <option value="design">Solo Diseño</option>
+                            <option value="refresh">Rediseño de Marca</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-section">
+                <h4>Preferencias de Marca</h4>
+                <form id="brand-preferences">
+                    <div class="form-group">
+                        <label for="brand-values">Valores Clave (selecciona hasta 3)</label>
+                        <select id="brand-values" multiple>
+                            <option value="innovation">Innovación</option>
+                            <option value="trust">Confianza</option>
+                            <option value="quality">Calidad</option>
+                            <option value="sustainability">Sostenibilidad</option>
+                            <option value="community">Comunidad</option>
+                            <option value="luxury">Lujo</option>
+                            <option value="fun">Diversión</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="color-preferences">Preferencias de Color</label>
+                        <input type="text" id="color-preferences" placeholder="Ej: Azules, neutros, contrastantes...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inspiration">Inspiración o Referencias</label>
+                        <textarea id="inspiration" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="modal-section">
+                <h4>Información de Contacto</h4>
+                <form id="contact-info">
+                    <div class="form-group">
+                        <label for="contact-name">Nombre Completo</label>
+                        <input type="text" id="contact-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-email">Correo Electrónico</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact-phone">Teléfono</label>
+                        <input type="tel" id="contact-phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">Cronograma Deseado</label>
+                        <select id="timeline">
+                            <option value="flexible">Flexible</option>
+                            <option value="1month">1 mes</option>
+                            <option value="3months">3 meses</option>
+                            <option value="6months">6 meses</option>
+                            <option value="urgent">Urgente</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            
+            <button class="btn btn-primary" style="width: 100%; margin-top: 2rem;">Enviar Solicitud</button>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script>
+        // Scroll Indicator
+        window.addEventListener('scroll', function() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+            scrollIndicator.style.width = scrollPercentage + '%';
+        });
+        
+        // Header Scroll Effect
+        let lastScroll = 0;
+        const header = document.getElementById('main-header');
+        
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 100) {
+                header.classList.remove('hidden');
+                header.classList.remove('scrolled');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hidden')) {
+                // Scroll down
+                header.classList.add('hidden');
+            } else if (currentScroll < lastScroll && header.classList.contains('hidden')) {
+                // Scroll up
+                header.classList.remove('hidden');
+            }
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Animate Stats
+        function animateStats() {
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach(item => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate');
+                            
+                            // Animate numbers
+                            const numberElement = entry.target.querySelector('.stat-number');
+                            if (numberElement) {
+                                const target = parseInt(numberElement.getAttribute('data-count'));
+                                const duration = 2000;
+                                const start = 0;
+                                const increment = target / (duration / 16);
+                                
+                                let current = start;
+                                const timer = setInterval(() => {
+                                    current += increment;
+                                    if (current >= target) {
+                                        clearInterval(timer);
+                                        current = target;
+                                    }
+                                    numberElement.textContent = Math.floor(current);
+                                }, 16);
+                            }
+                            
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(item);
+            });
+        }
+        
+        // Timeline Progress
+        function updateTimelineProgress() {
+            const timeline = document.querySelector('.methodology-timeline');
+            const phases = document.querySelectorAll('.phase');
+            const timelineProgress = document.querySelector('.timeline-progress');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const timelineHeight = timeline.offsetHeight;
+                        let visiblePhases = 0;
+                        
+                        phases.forEach(phase => {
+                            const rect = phase.getBoundingClientRect();
+                            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                                visiblePhases++;
+                            }
+                        });
+                        
+                        const progressPercentage = (visiblePhases / phases.length) * 100;
+                        timelineProgress.style.height = progressPercentage + '%';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(timeline);
+        }
+        
+        // Expand Phase Details
+        document.querySelectorAll('.expand-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const phaseNumber = this.getAttribute('data-phase');
+                const detailedPhase = document.getElementById(`detailed-phase-${phaseNumber}`);
+                const icon = this.querySelector('i');
+                
+                this.classList.toggle('active');
+                detailedPhase.classList.toggle('active');
+                
+                // Scroll to the expanded content
+                if (detailedPhase.classList.contains('active')) {
+                    detailedPhase.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        });
+        
+        // Progress Counter Simulation
+        document.getElementById('simulate-progress').addEventListener('click', function() {
+            const progressNumber = document.getElementById('progress-percent');
+            const progressFill = document.querySelector('.progress-fill');
+            let progress = 0;
+            
+            progressNumber.classList.add('pulse');
+            
+            const interval = setInterval(() => {
+                progress += 1;
+                progressNumber.textContent = progress;
+                progressFill.style.width = progress + '%';
+                
+                if (progress >= 78) {
+                    clearInterval(interval);
+                    progressNumber.classList.remove('pulse');
+                    
+                    // Update other metrics
+                    document.getElementById('completed-phases').textContent = '3';
+                    document.getElementById('deliverables-done').textContent = '14';
+                    document.getElementById('team-members').textContent = '5';
+                    document.getElementById('days-left').textContent = '12';
+                }
+            }, 30);
+        });
+        
+        document.getElementById('reset-progress').addEventListener('click', function() {
+            document.getElementById('progress-percent').textContent = '0';
+            document.querySelector('.progress-fill').style.width = '0%';
+            document.getElementById('progress-percent').classList.remove('pulse');
+            
+            // Reset other metrics
+            document.getElementById('completed-phases').textContent = '0';
+            document.getElementById('deliverables-done').textContent = '0';
+            document.getElementById('team-members').textContent = '0';
+            document.getElementById('days-left').textContent = '0';
+        });
+        
+        // Modal Handling
+        document.getElementById('open-modal').addEventListener('click', function() {
+            document.getElementById('project-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        document.querySelector('.modal-close').addEventListener('click', function() {
+            document.getElementById('project-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('project-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Scroll Reveal Animations
+        ScrollReveal().reveal('.section-header', {
+            delay: 200,
+            distance: '30px',
+            origin: 'top',
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: true
+        });
+        
+        ScrollReveal().reveal('.phase', {
+            delay: 300,
+            distance: '50px',
+            interval: 200,
+            origin: 'bottom',
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: true
+        });
+        
+        ScrollReveal().reveal('.tool-category, .deliverable-item', {
+            delay: 200,
+            distance: '30px',
+            interval: 100,
+            origin: 'bottom',
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: true
+        });
+        
+        // Initialize functions
+        document.addEventListener('DOMContentLoaded', function() {
+            animateStats();
+            updateTimelineProgress();
+        });
+    </script>
+</body>
+</html>
